@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Voo {
+    String origem;
+    String destino;
+    double preco;
+
+    Voo(String origem, String destino, double preco) {
+        this.origem = origem;
+        this.destino = destino;
+        this.preco = preco;
+    }
+}
+
+public class AcmeAir {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        List<Voo> voos = new ArrayList<>();
+        voos.add(new Voo("Fortaleza", "São Paulo", 850.00));
+        voos.add(new Voo("Fortaleza", "Rio de Janeiro", 700.00));
+        voos.add(new Voo("São Paulo", "Recife", 900.00));
+
+        System.out.println("=== ✈️ ACME Air ===");
+        System.out.print("Origem: ");
+        String origem = sc.nextLine().trim();
+        System.out.print("Destino: ");
+        String destino = sc.nextLine().trim();
+
+        boolean encontrado = false;
+        for (Voo v : voos) {
+            if (v.origem.equalsIgnoreCase(origem) && v.destino.equalsIgnoreCase(destino)) {
+                System.out.printf("Voo encontrado: %s → %s | Preço: R$ %.2f%n", v.origem, v.destino, v.preco);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Nenhum voo encontrado para este trajeto.");
+        }
+    }
+}
