@@ -1,0 +1,27 @@
+public class Teste {
+    public static void main(String[] args) {
+        CalculoInput c = new CalculoInput();
+        c.setNumero1(10);
+        c.setNumero2(8);
+
+        CalculoService s = new CalculoService();
+
+        System.out.println(s.subtrair(c));
+
+
+        TemperaturaInput t = new TemperaturaInput();
+        t.setValor(26);
+        t.setUnidadeOrigem('F');
+        t.setUnidadeDestino('C');
+
+        ConversaoService cs = new ConversaoService();
+
+        if (t.getUnidadeOrigem() == 'C' && t.getUnidadeDestino() == 'F'){
+            System.out.println(cs.celsiusParaFahrenheit(t));
+        } else if (t.getUnidadeOrigem() == 'F' && t.getUnidadeDestino() == 'C') {
+            System.out.println(cs.fahrenheitParaCelsius(t));
+        } else {
+            System.out.println("Não é possível converter pois a unidade de medida é a mesma");
+        }
+    }
+}
