@@ -1,0 +1,32 @@
+public class TemperaturaInput {
+    private double valor;
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    private char unidadeOrigem; // Ex: "C"
+
+    public char getUnidadeOrigem() {
+        return unidadeOrigem;
+    }
+
+    public void setUnidadeOrigem(char unidadeOrigem) {
+        this.unidadeOrigem = unidadeOrigem;
+    }
+
+
+    private char unidadeDestino; // Ex: "F"
+
+    public char getUnidadeDestino() {
+        return unidadeDestino;
+    }
+
+    public void setUnidadeDestino(char unidadeDestino) {
+        this.unidadeDestino = unidadeDestino;
+    }
+}
