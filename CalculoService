@@ -1,0 +1,14 @@
+public class CalculoService{
+
+    public double somar(CalculoInput a) {
+        return a.getNumero1() + a.getNumero2();
+    }
+
+    public double subtrair(CalculoInput a) {
+        return a.getNumero1() - a.getNumero2();
+    }
+
+    public double multiplicar(CalculoInput a) {
+        return a.getNumero1() * a.getNumero2();
+    }
+}
